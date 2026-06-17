@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-declare module "./globals.css";
-
 export const metadata: Metadata = {
   title: "مكتبة النور | Maktabat Al-Nour — Islamic E-Books",
   description:
