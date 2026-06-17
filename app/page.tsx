@@ -12,7 +12,7 @@ const t = {
     books: "Books", about: "About", reviews: "Reviews", bundles: "Bundles", cart: "Cart",
     bismillah: "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ",
     heroTitle1: "Illuminate Your Mind with", heroTitle2: "Premium Islamic Knowledge ✦",
-    heroSub: "Premium multilingual e-books on the lives of the Sahabah — crafted for the modern Muslim reader.",
+    heroSub: "Premium multilingual Islamic e-books — biographies, Quranic reflections, and more, crafted for the modern Muslim reader.",
     heroCta: "✦ Browse the Library",
     statBooks: "Books", statLang: "Languages", statRating: "Rating", statInstant: "Instant",
     collectionEye: "Our Collection", collectionTitle: "The Library of Light",
@@ -44,7 +44,7 @@ const t = {
     books: "الكتب", about: "عن المكتبة", reviews: "التقييمات", bundles: "الحزم", cart: "السلة",
     bismillah: "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ",
     heroTitle1: "أنِر عقلك بـ", heroTitle2: "المعرفة الإسلامية الراقية ✦",
-    heroSub: "كتب إلكترونية متعددة اللغات عن حياة الصحابة — صُممت للقارئ المسلم المعاصر.",
+    heroSub: "كتب إلكترونية إسلامية متعددة اللغات — سير، تأملات قرآنية، وأكثر — صُممت للقارئ المسلم المعاصر.",
     heroCta: "✦ تصفح المكتبة",
     statBooks: "كتاب", statLang: "لغتان", statRating: "التقييم", statInstant: "فوري",
     collectionEye: "مجموعتنا", collectionTitle: "مكتبة النور",
@@ -190,7 +190,6 @@ export default function Home() {
 
   return (
     <div dir={isRtl ? "rtl" : "ltr"}>
-
 
       {/* HEADER — mobile responsive */}
       <header style={{ background: "var(--ink)", borderBottom: "2px solid var(--gold)", position: "sticky", top: 0, zIndex: 100 }}>
@@ -481,7 +480,7 @@ export default function Home() {
                     <div style={{ color: "var(--gold)", fontSize: 12, letterSpacing: 1, marginBottom: 10 }}>
                       {"★".repeat(modalBook.stars)} <span style={{ fontSize: 11, color: "var(--ink-mid)", opacity: .5, fontFamily: "Inter" }}>{modalBook.reviewCount} reviews</span>
                     </div>
-                    <div style={{ fontSize: 13, color: "var(--ink-mid)", lineHeight: 1.75, opacity: .8 }}>{modalBook.description[lang]}</div>
+                    <div style={{ fontSize: 13, color: "var(--ink-mid)", lineHeight: 1.75, opacity: .8 }}>{modalBook.description[lang as "en"|"ar"|"fr"] ?? modalBook.description.en}</div>
                   </div>
                 </div>
               )}
