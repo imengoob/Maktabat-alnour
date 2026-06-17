@@ -4,14 +4,14 @@ import { useState } from "react";
 import books, { bundle, promoCodes } from "@/data/books";
 import type { Book } from "@/data/books";
 
-type Lang = "en" | "ar" | "fr";
+type Lang = "en" | "ar" | "fr" | "tr";
 
 const t = {
   en: {
     promo: "Ramadan Special — 3 Books for the price of 2 · Code:",
     books: "Books", about: "About", reviews: "Reviews", bundles: "Bundles", cart: "Cart",
     bismillah: "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ",
-    heroTitle1: "Know the Legacy of the", heroTitle2: "Companions of the Prophet ﷺ",
+    heroTitle1: "Illuminate Your Mind with", heroTitle2: "Premium Islamic Knowledge ✦",
     heroSub: "Premium multilingual e-books on the lives of the Sahabah — crafted for the modern Muslim reader.",
     heroCta: "✦ Browse the Library",
     statBooks: "Books", statLang: "Languages", statRating: "Rating", statInstant: "Instant",
@@ -43,7 +43,7 @@ const t = {
     promo: "عرض رمضان — 3 كتب بسعر 2 · الكود:",
     books: "الكتب", about: "عن المكتبة", reviews: "التقييمات", bundles: "الحزم", cart: "السلة",
     bismillah: "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ",
-    heroTitle1: "تعرّف على إرث", heroTitle2: "صحابة النبي ﷺ",
+    heroTitle1: "أنِر عقلك بـ", heroTitle2: "المعرفة الإسلامية الراقية ✦",
     heroSub: "كتب إلكترونية متعددة اللغات عن حياة الصحابة — صُممت للقارئ المسلم المعاصر.",
     heroCta: "✦ تصفح المكتبة",
     statBooks: "كتاب", statLang: "لغتان", statRating: "التقييم", statInstant: "فوري",
@@ -75,7 +75,7 @@ const t = {
     promo: "Spécial Ramadan — 3 livres pour le prix de 2 · Code :",
     books: "Livres", about: "À propos", reviews: "Avis", bundles: "Packs", cart: "Panier",
     bismillah: "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ",
-    heroTitle1: "Découvrez l'héritage des", heroTitle2: "Compagnons du Prophète ﷺ",
+    heroTitle1: "Éclairez votre esprit avec", heroTitle2: "la Connaissance Islamique ✦",
     heroSub: "E-books multilingues premium sur les vies des Sahabah — conçus pour le lecteur musulman moderne.",
     heroCta: "✦ Explorer la Bibliothèque",
     statBooks: "Livres", statLang: "Langues", statRating: "Note", statInstant: "Instantané",
@@ -102,6 +102,38 @@ const t = {
     promoLabel: "Code promo (optionnel)", promoPlaceholder: "ex: RAMADAN2025",
     oneTime: "Achat unique · Sans abonnement",
     includes: ["PDF arabe", "PDF anglais", "Livraison instantanée par email"],
+  },
+  tr: {
+    promo: "Ramazan Özel — 2 kitap alana 1 bedava · Kod:",
+    books: "Kitaplar", about: "Hakkında", reviews: "Yorumlar", bundles: "Paketler", cart: "Sepet",
+    bismillah: "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ",
+    heroTitle1: "Zihninizi Aydınlatın", heroTitle2: "Yüksek İslami Bilgi ile ✦",
+    heroSub: "Sahabenin hayatlarına dair çok dilli e-kitaplar — modern Müslüman okuyucu için tasarlandı.",
+    heroCta: "✦ Kütüphaneyi Keşfet",
+    statBooks: "Kitap", statLang: "Dil", statRating: "Puan", statInstant: "Anında",
+    collectionEye: "Koleksiyonumuz", collectionTitle: "Nur Kütüphanesi",
+    whyEye: "Neden bizi seçmelisiniz", whyTitle: "Ümmet için özenle hazırlandı",
+    feat1T: "Çok Dilli PDF'ler", feat1D: "Kitaplar Arapça, İngilizce, Türkçe ve daha fazlasında mevcut.",
+    feat2T: "Anında Teslimat", feat2D: "Ödeme sonrası Shopier PDF'nizi otomatik olarak e-postanıza gönderir.",
+    feat3T: "Güvenli Ödeme", feat3D: "Shopier güvencesiyle — şifreli ve güvenilir. Kartınız asla saklanmaz.",
+    feat4T: "Güvenilir İçerik", feat4D: "Sünnete saygı ve doğrulukla yazılmıştır.",
+    bundleTag: "🌟 En İyi Değer", bundleTitle: "Peygamberin Ashabı — Cennetle Müjdelenen On Kişi",
+    bundleSub: "10 Sahabe tek kitapta — Arapça ve İngilizce PDF. Eğitim ve hediye için mükemmel.",
+    bundleBtn: "Paketi Al →",
+    reviewsEye: "Okuyucu Yorumları", reviewsTitle: "Okuyucularımızdan",
+    nlAr: "اشترك في نشرتنا", nlTitle: "Yeni çıkışlardan haberdar olun",
+    nlSub: "Yeni biyografiler düzenli olarak ekleniyor.",
+    nlBtn: "Abone Ol", nlPlaceholder: "e-posta@adresiniz.com",
+    buyNow: "Satın Al →",
+    modalOrder: "Güvenli ödeme için Shopier'a yönlendirileceksiniz.",
+    payBtn: "🔒 Shopier'da Satın Al",
+    secure: "Güvenli ödeme · PDF e-postanıza otomatik gönderilir",
+    invalidEmail: "Lütfen geçerli bir e-posta adresi girin.",
+    promoApplied: "✦ Kod uygulandı:",
+    promoInvalid: "Geçersiz promosyon kodu.",
+    promoLabel: "Promosyon kodu (isteğe bağlı)", promoPlaceholder: "örn: RAMADAN2025",
+    oneTime: "Tek seferlik · Abonelik yok",
+    includes: ["Arapça PDF", "İngilizce PDF", "E-posta ile anında teslimat"],
   },
 };
 
@@ -159,12 +191,6 @@ export default function Home() {
   return (
     <div dir={isRtl ? "rtl" : "ltr"}>
 
-      {/* PROMO BAR */}
-      <div style={{ background: "var(--gold)", color: "var(--ink)", textAlign: "center", padding: "9px 2rem", fontSize: 12, fontWeight: 600, letterSpacing: ".07em" }}>
-        <span style={{ fontFamily: "'Scheherazade New',serif", fontSize: 15, margin: "0 8px" }}>✦</span>
-        {tx.promo} <strong>RAMADAN2025</strong>
-        <span style={{ fontFamily: "'Scheherazade New',serif", fontSize: 15, margin: "0 8px" }}>✦</span>
-      </div>
 
       {/* HEADER — mobile responsive */}
       <header style={{ background: "var(--ink)", borderBottom: "2px solid var(--gold)", position: "sticky", top: 0, zIndex: 100 }}>
@@ -181,7 +207,7 @@ export default function Home() {
               @media(max-width:700px){ .desktop-nav{ display:none!important } .mobile-controls{ display:flex!important } }
               @media(min-width:701px){ .mobile-controls{ display:none!important } .mobile-menu{ display:none!important } }
             `}</style>
-            {(["en","ar","fr"] as Lang[]).map((l) => (
+            {(["en","ar","fr","tr"] as Lang[]).map((l) => (
               <button key={l} onClick={() => setLang(l)}
                 style={{ background: lang === l ? "var(--gold)" : "transparent", color: lang === l ? "var(--ink)" : "var(--parchment-dark)", border: "1px solid " + (lang === l ? "var(--gold)" : "rgba(255,255,255,.15)"), padding: "4px 9px", borderRadius: 2, fontSize: 11, fontWeight: 700, cursor: "pointer", textTransform: "uppercase" }}>
                 {l.toUpperCase()}
@@ -216,7 +242,7 @@ export default function Home() {
           <div className="mobile-menu" style={{ background: "var(--ink-mid)", borderTop: "1px solid rgba(201,148,58,.2)", padding: "1rem 1.2rem", display: "flex", flexDirection: "column", gap: 12 }}>
             {/* Language switcher */}
             <div style={{ display: "flex", gap: 8 }}>
-              {(["en","ar","fr"] as Lang[]).map((l) => (
+              {(["en","ar","fr","tr"] as Lang[]).map((l) => (
                 <button key={l} onClick={() => { setLang(l); setMenuOpen(false); }}
                   style={{ background: lang === l ? "var(--gold)" : "transparent", color: lang === l ? "var(--ink)" : "var(--parchment-dark)", border: "1px solid " + (lang === l ? "var(--gold)" : "rgba(255,255,255,.2)"), padding: "6px 14px", borderRadius: 3, fontSize: 12, fontWeight: 700, cursor: "pointer", textTransform: "uppercase", flex: 1 }}>
                   {l.toUpperCase()}
@@ -407,13 +433,21 @@ export default function Home() {
           {([
             ["Library", ["All Books","Bundle Deal","New Releases","Gift Cards"]],
             ["Support", ["Contact Us","FAQ","Refund Policy","Download Help"]],
-            ["Follow", ["Instagram","Facebook","Twitter / X","YouTube"]],
           ] as [string, string[]][]).map(([h, links]) => (
             <div key={h}>
               <h4 style={{ fontSize: 11, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: "var(--gold)", marginBottom: ".9rem" }}>{h}</h4>
               {links.map((l) => <a key={l} href="#" style={{ display: "block", fontSize: 12, color: "var(--parchment-deep)", opacity: .45, textDecoration: "none", marginBottom: 6 }}>{l}</a>)}
             </div>
           ))}
+          {/* Follow column with real Instagram */}
+          <div>
+            <h4 style={{ fontSize: 11, fontWeight: 700, letterSpacing: ".15em", textTransform: "uppercase", color: "var(--gold)", marginBottom: ".9rem" }}>Follow</h4>
+            <a href="https://www.instagram.com/aamhpublishing?igsh=ZDdmcm43bTgya2k3&utm_source=qr" target="_blank" rel="noopener noreferrer"
+              style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "var(--gold-light)", opacity: .85, textDecoration: "none", marginBottom: 6, fontWeight: 600 }}>
+              📸 Instagram
+            </a>
+            {["Facebook","Twitter / X","YouTube"].map((l) => <a key={l} href="#" style={{ display: "block", fontSize: 12, color: "var(--parchment-deep)", opacity: .45, textDecoration: "none", marginBottom: 6 }}>{l}</a>)}
+          </div>
         </div>
         <div style={{ maxWidth: 1200, margin: "0 auto", paddingTop: "1.2rem", borderTop: "1px solid rgba(201,148,58,.08)", display: "flex", justifyContent: "space-between", fontSize: 11, color: "var(--parchment-deep)", opacity: .35 }}>
           <span>© 2025 Maktabat Al-Nour · All rights reserved</span>
